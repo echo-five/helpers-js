@@ -1,6 +1,6 @@
 {
     "name": "echo-five/helpers-js",
-    "description": "Echo-Five API Helpers JS",
+    "description": "Echo-Five Helpers JS",
     "type": "library",
     "version": "1.0.0",
     "license": "MIT",
