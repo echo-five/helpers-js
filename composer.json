@@ -1,0 +1,14 @@
+{
+    "name": "echo-five/helpers-js",
+    "description": "Echo-Five API Helpers JS",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthieu Roy",
+            "email": "m@matthieuroy.be",
+            "homepage": "https://www.matthieuroy.be"
+        }
+    ],
+}
