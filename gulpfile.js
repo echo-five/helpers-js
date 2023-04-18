@@ -61,14 +61,28 @@ task('package-scripts', cb => {
   // Copy file, as is, just move to the destination folder.
   let subTaskCopy1 = src(paths.scripts.base + 'helpers.jquery.js')
     .pipe(gulpPlumber())
-    .pipe(gulpUglify())
+    .pipe(gulpUglify(
+      {
+        mangle: true,
+        output: {
+          comments: /^!/
+        }
+      }
+    ))
     .pipe(gulpRename({suffix: '.min'}))
     .pipe(dest(paths.scripts.dest));
   // Helpers functions  (default Javascript).
   // Copy file, as is, just move to the destination folder.
   let subTaskCopy2 = src(paths.scripts.base + 'helpers.js')
     .pipe(gulpPlumber())
-    .pipe(gulpUglify())
+    .pipe(gulpUglify(
+      {
+        mangle: true,
+        output: {
+          comments: /^!/
+        }
+      }
+    ))
     .pipe(gulpRename({suffix: '.min'}))
     .pipe(dest(paths.scripts.dest));
   // Create the helpers bundle (merge of files).
@@ -78,7 +92,14 @@ task('package-scripts', cb => {
   ])
     .pipe(gulpPlumber())
     .pipe(gulpConcat('helpers.bundle.js'))
-    .pipe(gulpUglify())
+    .pipe(gulpUglify(
+      {
+        mangle: true,
+        output: {
+          comments: /^!/
+        }
+      }
+    ))
     .pipe(gulpRename({suffix: '.min'}))
     .pipe(dest(paths.scripts.dest));
   // Return.
