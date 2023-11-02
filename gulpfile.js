@@ -120,7 +120,7 @@ task('watch', (cb) => {
   cb();
 });
 
-// Task - Watch.
+// Task - Default.
 task('default', (cb) => {
   fancyLog.info('-------------------------------------------');
   fancyLog.info('Hi,');
